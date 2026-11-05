@@ -1,0 +1,281 @@
+﻿/*Contenido general*/
+body {
+    padding: 0px;
+    font-size: 18px;
+    background-color: #efefef70 !important;
+}
+
+.espacio-izqder{
+    padding-left:125px !important;
+    padding-right:125px !important;
+}
+
+.fondoFooter {
+    background-color: #00B2E3 !important;
+}
+
+.fondo-blanco{
+    background-color: white !important;
+}
+
+.separacionAzul {
+    background-color: #004A98 !important;
+}
+
+.separacionGris {
+    background-color: #E7ECF1 !important;
+}
+
+.logoUASLP {
+    height: 84px !important;
+    padding: 10px 15px;
+}
+
+.textoUASLP {
+    font-family: OpenSans-Bold !important;
+    color: white !important;
+    font-size: 35px !important;
+    margin-bottom:0;
+}
+
+.header {
+    width: auto;
+
+    text-align: left;
+    background-color: #004A98;
+    transition: height 0.8s;
+}
+
+    .header a, .piePagina a {
+        color: white !important;
+        text-decoration: none !important;
+        font-family: OpenSans-SemiBold !important;
+    }
+
+    .header a {
+        font-size: 18px !important;
+    }
+
+.piePagina a {
+    font-size: 20px !important;
+}
+
+    .header a:hover, .piePagina a:hover {
+        text-decoration: underline !important;
+    }
+
+	
+.textoUASLP, .textoUASLP a {
+    font-family: OpenSans-Bold !important;
+    color: white !important;
+    font-size: 35px !important;
+    margin-bottom: 0;
+}
+
+
+.menu {
+    background-color: #FFFFFF !important;
+}
+
+    .menu a {
+        font-family: OpenSans-SemiBold !important;
+        color: #004A98 !important;
+        font-size: 20px !important;
+    }
+
+        .menu a:hover {
+            color: #FFFFFF !important;
+            background-color: #004A98 !important;
+            border-radius: 4px 4px;
+        }
+
+
+.nav-link.disabled, .dropdown-item.disabled, a.disabled {
+    color: #6c757d7a !important;
+    pointer-events: none;
+    cursor: default;
+}
+
+.menu .nav-item {
+    margin-right: 10px !important;
+}
+
+
+
+.nav-link.disabled, .dropdown-item.disabled, a.disabled {
+    color: #6c757d7a !important;
+    pointer-events: none;
+    cursor: default;
+}
+
+.menu .nav-item {
+    margin-right: 10px !important;
+}
+
+.imagenPrincipal {
+    height: 500px;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /*Para posicionar el texto descriptivo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.nombre-entidad {
+    color: #FFFFFF;
+    font-family: 'OpenSans-Bold';
+    font-size: 35px;
+}
+.descripcion-entidad {
+    color: #FFFFFF;
+    font-family: 'OpenSans-Bold';
+    font-size: 20px !important;
+}
+
+.contenido {
+    background-color: white !important;
+}
+
+/*-----------------------texto y títulos--------------------------*/
+.titulo1 {
+    font-family: OpenSans-ExtraBold !important;
+    color: #00B2E3 !important;
+    font-size: 42px !important;
+}
+
+.titulo2 {
+    font-family: OpenSans-SemiBold !important;
+    color: #004A98 !important;
+    font-size:22px !important;
+}
+
+.subtitulo {
+    font-family: OpenSans-Bold !important;
+    color: #004A98 !important;
+    font-size: 45px !important;
+}
+
+.subtitulo2 {
+    font-family: OpenSans-Regular !important;
+    color: #004A98 !important;
+    font-size: 26px !important;
+}
+
+.texto {
+    font-family: OpenSans-Regular !important;
+    color: #4D4D4D !important;
+    font-size:20px !important;
+}
+
+.texto-negro {
+    font-family: OpenSans-Regular !important;
+    color: #333333 !important;
+    font-size: 18px !important;
+}
+
+#identidad {
+    font-family: OpenSans-Light !important;
+    font-size: 18px !important;
+}
+
+/*-----------------------botones--------------------------*/
+.btn-vermas {
+    background-color: #2080CB !important;
+    color: white !important;
+    padding: 5px 20px;
+    font-family: OpenSans-SemiBold !important;
+    font-size:20px !important;
+    border-radius:20px 20px !important;
+}
+
+/*Pie de página*/
+.piePagina {
+    width: auto;
+    height: 280px;
+    background-color: #004A98;
+    padding: 25px 50px 30px 50px;
+}
+
+.piePagina-inside {
+    width: auto;
+    background-color: #004A98;
+    padding: 25px 50px 30px 50px;
+}
+
+.circulo {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color:white;
+    margin:2px !important;
+}
+
+.cobertura-alto {
+    height: 185px !important;
+}
+
+@media (max-width: 480px){
+    .logoUASLP {
+        height:60px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        text-align: center !important;
+        height: auto !important;
+    }
+
+    .logoUASLP {
+        padding: 5px 15px !important;
+    }
+
+    .divisorUASLP-ENTIDAD.tipo-2 {
+        display: none !important;
+    }
+    .divisorUASLP-ENTIDADScroll.tipo-2 {
+        display: none!important;
+    }
+
+    .imagenPrincipal {
+        height: 100px !important;
+    }
+
+    .nombre-entidad {
+        font-size: 20px;
+    }
+
+    .descripcion-entidad {
+        display: none;
+    }
+
+    .piePagina {
+        height: 550px !important;
+    }
+
+    .titulo1 {
+        font-size: 35px !important;
+    }
+
+    .espacio-izqder {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+.divisorUASLP-ENTIDAD {
+    height: 70px;
+    width: 2px;
+    background-color: white;
+}
+
+.divisorUASLP-ENTIDADScroll {
+    height: 35px;
+    width: 2px;
+    background-color: white;
+}

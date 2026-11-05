@@ -1,0 +1,10 @@
+/*Estilos de los navbars*/
+.navbar-a-style {
+    color: #004A98 !important;
+    font-size: 1.1rem;
+}
+
+.navbar-sign-off-btn {
+    background-color: #B72025 !important; 
+    border: none;
+}
