@@ -16,7 +16,7 @@ class ConfiguracionSeeder extends Seeder
             'max_admins'           => 10,
             'correo_contacto'          => 'servicios.internet@uaslp.mx',
             'telefono_contacto'        => '(444) 826-2300 ext. 1234',
-            'clave_superadmin_origen'  => '323352',
+            'clave_superadmin_origen'  => 'Superadmin',
             'minutos_expiracion_otp'   => 15,
         ]);
     }
