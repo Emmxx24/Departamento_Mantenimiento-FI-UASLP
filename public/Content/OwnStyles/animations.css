@@ -1,0 +1,238 @@
+/* ==========================================================================
+   ANIMACIONES Y MICRO-INTERACCIONES DEL SISTEMA
+   Departamento de Mantenimiento - Facultad de Ingeniería UASLP
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Entrada Suave de Página
+   -------------------------------------------------------------------------- */
+main {
+    animation: pageFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0.85;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. Tarjetas de Tickets y Componentes Interactivos
+   -------------------------------------------------------------------------- */
+.ticket-card,
+.card-hover,
+.borrador-card,
+.inventario-card {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.25s ease,
+                opacity 0.25s ease;
+}
+
+.ticket-card:hover,
+.card-hover:hover,
+.borrador-card:hover,
+.inventario-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 74, 152, 0.12) !important;
+    border-color: rgba(0, 74, 152, 0.3) !important;
+}
+
+.inventario-card.card-inactiva {
+    opacity: 0.85;
+}
+
+.inventario-card.card-inactiva:hover {
+    opacity: 1;
+}
+
+/* Efecto hover suave en la imagen del inventario */
+.inventario-card .ratio img {
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inventario-card:hover .ratio img {
+    transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   3. Botones y Elementos de Acción
+   -------------------------------------------------------------------------- */
+.btn {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-primary:hover:not(:disabled) {
+    box-shadow: 0 4px 14px rgba(0, 74, 152, 0.3) !important;
+}
+
+.btn-danger:hover:not(:disabled),
+.btn-outline-danger:hover:not(:disabled) {
+    box-shadow: 0 4px 14px rgba(183, 32, 37, 0.25) !important;
+}
+
+.btn-success:hover:not(:disabled),
+.btn-outline-success:hover:not(:disabled) {
+    box-shadow: 0 4px 14px rgba(25, 135, 84, 0.25) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Menús Desplegables (Dropdowns)
+   -------------------------------------------------------------------------- */
+.dropdown-menu {
+    animation: dropdownFadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: top center;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-item {
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 74, 152, 0.08);
+}
+
+.dropdown-item.text-danger:hover {
+    background-color: rgba(183, 32, 37, 0.08) !important;
+    color: #b72025 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Navegación y Enlaces del Navbar
+   -------------------------------------------------------------------------- */
+.navbar-nav .nav-link.navbar-a-style,
+.navbar-nav .nav-link.navbar-user-link {
+    transition: color 0.2s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-nav .nav-link.navbar-a-style:hover,
+.navbar-nav .nav-link.navbar-user-link:hover {
+    color: #0076C0 !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.navbar-a-style:active,
+.navbar-nav .nav-link.navbar-user-link:active {
+    transform: translateY(0) scale(0.97);
+}
+
+/* --------------------------------------------------------------------------
+   6. Tablas y Filas
+   -------------------------------------------------------------------------- */
+.table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 74, 152, 0.04) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. Insignias (Badges)
+   -------------------------------------------------------------------------- */
+/* Las insignias estáticas no deben reaccionar con transformaciones al pasar el cursor */
+.badge {
+    user-select: none;
+}
+
+/* --------------------------------------------------------------------------
+   8. Controles de Formulario (Inputs y Selects)
+   -------------------------------------------------------------------------- */
+.form-control,
+.form-select {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 74, 152, 0.15) !important;
+    border-color: #004A98 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. Estilos de Estados Vacíos (Empty States)
+   -------------------------------------------------------------------------- */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    color: #dee2e6;
+}
+
+.btn-nuevo-ticket {
+    background-color: #004A98;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-nuevo-ticket:hover {
+    background-color: #003a7a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 74, 152, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   10. Componentes Especiales (Bóveda y Mensajes de Chat)
+   -------------------------------------------------------------------------- */
+.btn-modal-close {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    opacity: 0.8;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+}
+
+.btn-modal-close:hover {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+}
+
+.archivo-adjunto-chip {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.88em;
+    color: #ffffff !important;
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.archivo-adjunto-chip:hover {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+    transform: translateY(-1.5px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
